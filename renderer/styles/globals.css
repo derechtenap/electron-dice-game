@@ -32,3 +32,10 @@
 .draggable select {
   -webkit-app-region: no-drag
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100dvh;
+  width: 100dvw;
+}

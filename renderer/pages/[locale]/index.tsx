@@ -1,10 +1,33 @@
-import { getStaticPaths, makeStaticProperties } from "@/lib/getStatic";
+import type { NextPage } from "next";
 import { useTranslation } from "next-i18next";
+import Link from "next/link";
 
-const IndexPage = () => {
-  const { t } = useTranslation();
+import { getStaticPaths, makeStaticProperties } from "@/lib/getStatic";
+import formatLocalizedRoute from "utils/navigation/formatLocalizedRoute";
 
-  return <>{t("yes")}</>;
+const IndexPage: NextPage = () => {
+  const {
+    t,
+    i18n: { language: locale },
+  } = useTranslation();
+
+  return (
+    <>
+      <p>{t("yes")}</p>
+      <ul>
+        <li>
+          <Link
+            href={formatLocalizedRoute({
+              locale,
+              route: "/playingTest",
+            })}
+          >
+            PlayingTest
+          </Link>
+        </li>
+      </ul>
+    </>
+  );
 };
 
 export default IndexPage;
