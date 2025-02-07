@@ -66,6 +66,11 @@ const PlayingTestPage: NextPage = () => {
     });
   };
 
+  // TODO: Remove these values in production
+  console.info("DICES", dices);
+  console.info("SELECTED_DICES", selectedDices);
+  console.info("IS_BUST", checkForBust(dices));
+
   return (
     <Stack>
       <Group grow>
@@ -112,9 +117,6 @@ const PlayingTestPage: NextPage = () => {
           ))}
         </Flex>
       </Group>
-      <Text>Dices: {JSON.stringify(dices)}</Text>
-      <Text>Bust: {JSON.stringify(checkForBust(dices))}</Text>
-      <Text>Selected: {JSON.stringify(selectedDices)}</Text>
     </Stack>
   );
 };
