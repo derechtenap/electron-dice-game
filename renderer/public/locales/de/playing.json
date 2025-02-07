@@ -1,4 +1,13 @@
 {
+  "dice_one": "Würfel",
+  "dice_other": "Würfel",
+  "diceSide.1": "Eins",
+  "diceSide.2": "Zwei",
+  "diceSide.3": "Drei",
+  "diceSide.4": "Vier",
+  "diceSide.5": "Fünf",
+  "diceSide.6": "Sechs",
+  "score": "Punktzahl: {{score}}",
   "startRound": "Runde starten...",
   "addDicesToBank": "Würfel zur Seite legen",
   "isBust": "Kein Glück! Mit diesen Würfeln geht es nicht weiter..."

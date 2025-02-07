@@ -1,4 +1,13 @@
 {
+  "dice_one": "Die",
+  "dice_other": "Dice",
+  "diceSide.1": "One",
+  "diceSide.2": "Two",
+  "diceSide.3": "Three",
+  "diceSide.4": "Four",
+  "diceSide.5": "Five",
+  "diceSide.6": "Six",
+  "score": "Score: {{score}}",
   "startRound": "Start round...",
   "addDicesToBank": "Set dice aside",
   "isBust": "No luck! You can't continue with these dice..."

@@ -89,7 +89,11 @@ const PlayingTestPage: NextPage = () => {
               onClick={() => toggleDiceSelection(index)}
               style={{ cursor: "pointer" }}
             >
-              <Tooltip label={t(`dice.${dice}`)} position="bottom" withArrow>
+              <Tooltip
+                label={t(`playing:diceSide.${dice}`)}
+                position="bottom"
+                withArrow
+              >
                 {selectedDices[index]
                   ? FILLED_DICE_ICONS[dice]
                   : DICE_ICONS[dice]}
