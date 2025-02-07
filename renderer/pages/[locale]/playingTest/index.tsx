@@ -2,12 +2,11 @@ import { useState } from "react";
 import type { NextPage } from "next";
 import { useTranslation } from "next-i18next";
 
-import { Box, Button, Flex, Stack } from "@mantine/core";
+import { Box, Button, Flex, Group, Stack, Tooltip } from "@mantine/core";
 
 import { getStaticPaths, makeStaticProperties } from "@/lib/getStatic";
 import getInitialDices from "@/lib/playing/getInitialDices";
 
-import { INITIAL_NUMBER_OF_DICES } from "utils/constants";
 import { DICE_ICONS, FILLED_DICE_ICONS } from "utils/diceIcons";
 
 const PlayingTestPage: NextPage = () => {
@@ -33,26 +32,46 @@ const PlayingTestPage: NextPage = () => {
     });
   };
 
+  // Reset the current round. Only for debugging purposes!
+  // TODO: Disable this code later
+  const resetRound = () => {
+    setDices([]);
+    setSelectedDices([]);
+  };
+
   return (
     <Stack>
-      <Button onClick={rollDices}>Roll {INITIAL_NUMBER_OF_DICES} dices</Button>
-      <Flex gap="xs">
-        {dices.map((dice, index) => (
-          <Box
-            key={index}
-            onClick={() => toggleDiceSelection(index)}
-            style={{ cursor: "pointer" }}
-          >
-            {selectedDices[index] ? FILLED_DICE_ICONS[dice] : DICE_ICONS[dice]}
-          </Box>
-        ))}
-      </Flex>
+      <Group>
+        <Button disabled={dices.length !== 0} onClick={rollDices}>
+          {t("playing:startRound")}
+        </Button>
+        <Button onClick={resetRound}>{t("cancel")}</Button>
+      </Group>
+      <Group>
+        <Flex gap="xs">
+          Current:
+          {dices.map((dice, index) => (
+            <Box
+              key={index}
+              onClick={() => toggleDiceSelection(index)}
+              style={{ cursor: "pointer" }}
+            >
+              <Tooltip label={t(`dice.${dice}`)} position="bottom" withArrow>
+                {selectedDices[index]
+                  ? FILLED_DICE_ICONS[dice]
+                  : DICE_ICONS[dice]}
+              </Tooltip>
+            </Box>
+          ))}
+        </Flex>
+        <Flex>Bank:</Flex>
+      </Group>
     </Stack>
   );
 };
 
 export default PlayingTestPage;
 
-export const getStaticProps = makeStaticProperties(["common", "gameModes"]);
+export const getStaticProps = makeStaticProperties(["common", "playing"]);
 
 export { getStaticPaths };
