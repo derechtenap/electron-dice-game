@@ -1,3 +1,5 @@
 {
-  "startRound": "Start round..."
+  "startRound": "Start round...",
+  "addDicesToBank": "Set dice aside",
+  "isBust": "No luck! You can't continue with these dice..."
 }

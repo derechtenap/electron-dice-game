@@ -1,3 +1,5 @@
 {
-  "startRound": "Runde starten..."
+  "startRound": "Runde starten...",
+  "addDicesToBank": "Würfel zur Seite legen",
+  "isBust": "Kein Glück! Mit diesen Würfeln geht es nicht weiter..."
 }
