@@ -19,6 +19,7 @@ const PlayingTestPage: NextPage = () => {
   const [dices, setDices] = useState<number[]>([]);
   const [selectedDices, setSelectedDices] = useState<boolean[]>([]);
   const [bankedDices, setBankedDices] = useState<number[]>([]);
+  const [isBust, setIsBust] = useState(false);
 
   // Roll new dices and reset selection.
   const rollDices = () => {
@@ -42,6 +43,7 @@ const PlayingTestPage: NextPage = () => {
     setDices([]);
     setBankedDices([]);
     setSelectedDices([]);
+    setIsBust(false);
   };
 
   const addDicesToBank = () => {
@@ -59,6 +61,7 @@ const PlayingTestPage: NextPage = () => {
         rollDice()
       );
 
+      setIsBust(checkForBust(newDices));
       setDices(newDices);
       setSelectedDices(new Array(newDices.length).fill(false)); // Reset selection
 
@@ -117,6 +120,7 @@ const PlayingTestPage: NextPage = () => {
           ))}
         </Flex>
       </Group>
+      {isBust ? <Text>{t("playing:isBust")}</Text> : undefined}
     </Stack>
   );
 };
