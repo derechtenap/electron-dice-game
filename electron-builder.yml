@@ -1,6 +1,6 @@
-appId: com.app.dartsmate
-productName: DartsMate
-copyright: Copyright © 2022-2025 DartsMate Contributors
+appId: com.app.electronDiceGame
+productName: Electron Dice Game
+copyright: Copyright © 2025 Electron Dice Game Contributors
 directories:
   output: dist
   buildResources: resources
@@ -14,6 +14,6 @@ publish:
     protocol: https
     # Required for auto updater
     owner: derechtenap
-    repo: dartsmate
+    repo: electron-dice-game
 win:
   target: nsis
