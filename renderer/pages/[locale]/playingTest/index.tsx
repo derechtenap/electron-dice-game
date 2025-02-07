@@ -10,7 +10,7 @@ import getInitialDices from "@/lib/playing/getInitialDices";
 import { DICE_ICONS, FILLED_DICE_ICONS } from "utils/diceIcons";
 import rollDice from "@/lib/playing/rollDice";
 import { INITIAL_NUMBER_OF_DICES } from "utils/constants";
-import checkForBust from "@/lib/playing/checkForBust";
+import checkForBust from "@/lib/playing/scoring/checkForBust";
 
 const PlayingTestPage: NextPage = () => {
   const { t } = useTranslation();

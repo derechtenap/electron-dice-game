@@ -1,7 +1,7 @@
-import isFullStraight from "./scoring/isFullStraight";
-import isPartialStraight from "./scoring/isPartialStraight";
-import containsOneOrFive from "./scoring/containsOneOrFive";
-import isThreeOfAKind from "./scoring/isThreeOfAKind";
+import isFullStraight from "./isFullStraight";
+import isPartialStraight from "./isPartialStraight";
+import containsOneOrFive from "./containsOneOrFive";
+import isThreeOfAKind from "./isThreeOfAKind";
 
 /**
  * Determines whether the player is "busted" and cannot score in the current round.
