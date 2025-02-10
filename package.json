@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "electron-dice-game",
-  "productName": "electron-dice-game",
+  "productName": "Dice",
   "description": "",
   "version": "0.1.0",
   "author": "Electron Dice Game Contributes",

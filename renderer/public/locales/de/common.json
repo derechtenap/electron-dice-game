@@ -4,5 +4,8 @@
   "cancel": "Abbrechen",
   "back": "Zurück",
   "next": "Weiter",
-  "confirm": "Bestätigen"
+  "confirm": "Bestätigen",
+  "route.play": "Play",
+  "route.settings": "Settings",
+  "route.closeGame": "Close Game"
 }

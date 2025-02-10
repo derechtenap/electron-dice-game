@@ -25,3 +25,7 @@
 ## :construction_worker: Contributors
 
 - Tim Deres ([@derechtenap](https://github.com/derechtenap))
+
+### Assets
+
+- [Wood Texture Tiles](https://opengameart.org/content/wood-texture-tiles) by [JCW](https://opengameart.org/users/jcw) (License: [CC0](https://creativecommons.org/publicdomain/zero/1.0/))
