@@ -16,6 +16,9 @@ import isThreeOfAKind from "./isThreeOfAKind";
  * @returns {boolean} Returns `true` if the player is busted, otherwise `false`.
  */
 const checkForBust = (dices: number[]): boolean => {
+  // Sort the dices for later comparison with the partial and full straight
+  dices.sort();
+
   // TODO: Maybe remove this later
   if (process.env.NODE_ENV !== "production") {
     console.table({

@@ -17,9 +17,6 @@ const isFullStraight = (dices: number[]): boolean => {
     return false;
   }
 
-  // Sort the input dice array to ensure correct comparison
-  dices.sort();
-
   return (
     // If values match, so it's a full straight
     dices.every((d, idx) => d === FULL_STRAIGHT[idx])

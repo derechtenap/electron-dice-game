@@ -14,9 +14,6 @@ const isPartialStraight = (dices: number[]): boolean => {
     return false;
   }
 
-  // Sort dice array for proper comparison
-  dices.sort();
-
   // Check if the sorted dice match either of the partial straight patterns
   return (
     dices.every((d, idx) => d === PARTIAL_STRAIGHT_ONE_TO_FIVE[idx]) ||
