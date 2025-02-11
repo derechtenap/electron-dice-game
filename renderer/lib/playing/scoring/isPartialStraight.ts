@@ -4,27 +4,24 @@ import {
 } from "utils/constants";
 
 /**
- * Checks if the dice set contains a partial straight.
- * A partial straight can either be from 1-5 or 2-6.
+ * Checks if the dice values contains a partial straight (either 1-5 or 2-6).
  *
- * @author Tim Deres <derechtenap>
- * @version 1.0
- *
- * @see GAME.md - Scoring
- *
- * @param {Set<number>} diceSet - The set of dice values rolled by the player.
- * @returns {boolean} Returns `true` if the dice set contains a partial straight (either 1-5 or 2-6), otherwise `false`.
+ * @param {number[]} dices - An array of dice values rolled by the player.
+ * @returns {boolean} Returns `true` if the array contains a partial straight, otherwise `false`.
  */
-const isPartialStraight = (diceSet: Set<number>): boolean => {
-  if (PARTIAL_STRAIGHT_ONE_TO_FIVE.every((dice) => diceSet.has(dice))) {
-    return true;
+const isPartialStraight = (dices: number[]): boolean => {
+  if (dices.length !== PARTIAL_STRAIGHT_ONE_TO_FIVE.length) {
+    return false;
   }
 
-  if (PARTIAL_STRAIGHT_TWO_TO_SIX.every((dice) => diceSet.has(dice))) {
-    return true;
-  }
+  // Sort dice array for proper comparison
+  dices.sort();
 
-  return false;
+  // Check if the sorted dice match either of the partial straight patterns
+  return (
+    dices.every((d, idx) => d === PARTIAL_STRAIGHT_ONE_TO_FIVE[idx]) ||
+    dices.every((d, idx) => d === PARTIAL_STRAIGHT_TWO_TO_SIX[idx])
+  );
 };
 
 export default isPartialStraight;

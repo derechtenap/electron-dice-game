@@ -12,9 +12,9 @@ export const DATE_OPTIONS: Intl.DateTimeFormatOptions = {
 
 export const INITIAL_NUMBER_OF_DICES = 6;
 
-export const FULL_STRAIGHT = [1, 2, 3, 4, 5, 6];
-export const PARTIAL_STRAIGHT_ONE_TO_FIVE = [1, 2, 3, 4, 5];
-export const PARTIAL_STRAIGHT_TWO_TO_SIX = [2, 3, 4, 5, 6];
+export const FULL_STRAIGHT = [1, 2, 3, 4, 5, 6] as const;
+export const PARTIAL_STRAIGHT_ONE_TO_FIVE = [1, 2, 3, 4, 5] as const;
+export const PARTIAL_STRAIGHT_TWO_TO_SIX = [2, 3, 4, 5, 6] as const;
 
 export const LOWEST_DICE_SIDE = 1;
 export const HIGHEST_DICE_SIDE = 6;

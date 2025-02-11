@@ -16,13 +16,21 @@ import isThreeOfAKind from "./isThreeOfAKind";
  * @returns {boolean} Returns `true` if the player is busted, otherwise `false`.
  */
 const checkForBust = (dices: number[]): boolean => {
-  const diceSet = new Set(dices);
+  // TODO: Maybe remove this later
+  if (process.env.NODE_ENV !== "production") {
+    console.table({
+      isFullStraight: isFullStraight(dices),
+      isPartialStraight: isPartialStraight(dices),
+      isThreeOfAKind: isThreeOfAKind(dices),
+      containsOneOrFive: containsOneOrFive(dices),
+    });
+  }
 
   // Check for each scoring condition
-  if (isFullStraight(diceSet)) return false;
-  if (isPartialStraight(diceSet)) return false;
-  if (isThreeOfAKind(diceSet)) return false;
-  if (containsOneOrFive(diceSet)) return false;
+  if (isFullStraight(dices)) return false;
+  if (isPartialStraight(dices)) return false;
+  if (isThreeOfAKind(dices)) return false;
+  if (containsOneOrFive(dices)) return false;
 
   // The player is busted and cannot score
   return true;
