@@ -9,7 +9,14 @@
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:@next/next/recommended"
   ],
-  "overrides": [],
+  "overrides": [
+    {
+      "files": ["tests/**/*"],
+      "env": {
+        "jest": true
+      }
+    }
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -21,5 +28,5 @@
     "@next/next/no-html-link-for-pages": ["error", "renderer/pages/"]
   },
   "root": true,
-  "ignorePatterns": ["renderer/next.config.js"]
+  "ignorePatterns": ["renderer/next.config.js", "jest.config.js"]
 }
