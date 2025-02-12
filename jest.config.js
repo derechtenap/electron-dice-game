@@ -1,5 +1,9 @@
-/** @type {import('ts-jest').JestConfigWithTsJest} **/
-module.exports = {
+/* eslint-disable no-undef */
+
+/** 
+ * @type {import('ts-jest').JestConfigWithTsJest} 
+ **/
+const config = {
   testEnvironment: "node",
   transform: {
     "^.+.tsx?$": ["ts-jest", {
@@ -16,3 +20,5 @@ module.exports = {
     "@/utils/(.*)": "<rootDir>/renderer/utils/$1"
   },
 };
+
+module.exports = config

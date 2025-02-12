@@ -13,7 +13,8 @@
     "**/*.ts",
     "**/*.tsx",
     "../main/**/*.ts",
-    "../main/**/*.tsx"
+    "../main/**/*.tsx",
+    "../jest.config.js"
   ],
   "exclude": ["node_modules"]
 }
