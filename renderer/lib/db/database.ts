@@ -1,6 +1,6 @@
 import Dexie, { type EntityTable } from "dexie";
 
-import { APP_NAME } from "utils/constants";
+import { APP_NAME } from "@/utils/constants";
 
 import type { Profile } from "types/profile";
 

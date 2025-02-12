@@ -1,7 +1,7 @@
 import {
   PARTIAL_STRAIGHT_ONE_TO_FIVE,
   PARTIAL_STRAIGHT_TWO_TO_SIX,
-} from "utils/constants";
+} from "@/utils/constants";
 
 /**
  * Checks if the dice values contains a partial straight (either 1-5 or 2-6).

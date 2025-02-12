@@ -7,9 +7,9 @@ import WoodBackground from "@/components/WoodBackground";
 
 import { getStaticPaths, makeStaticProperties } from "@/lib/getStatic";
 
-import formatLocalizedRoute from "utils/navigation/formatLocalizedRoute";
-import { APP_NAME } from "utils/constants";
-import ROUTES from "utils/navigation/routes";
+import formatLocalizedRoute from "@/utils/navigation/formatLocalizedRoute";
+import { APP_NAME } from "@/utils/constants";
+import ROUTES from "@/utils/navigation/routes";
 
 /**
  * Renders the main menu with a wooden background.

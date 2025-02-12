@@ -19,16 +19,6 @@ const checkForBust = (dices: number[]): boolean => {
   // Sort the dices for later comparison with the partial and full straight
   dices.sort();
 
-  // TODO: Maybe remove this later
-  if (process.env.NODE_ENV !== "production") {
-    console.table({
-      isFullStraight: isFullStraight(dices),
-      isPartialStraight: isPartialStraight(dices),
-      isThreeOfAKind: isThreeOfAKind(dices),
-      containsOneOrFive: containsOneOrFive(dices),
-    });
-  }
-
   // Check for each scoring condition
   if (isFullStraight(dices)) return false;
   if (isPartialStraight(dices)) return false;

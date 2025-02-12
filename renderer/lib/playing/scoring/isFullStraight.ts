@@ -1,4 +1,4 @@
-import { FULL_STRAIGHT } from "utils/constants";
+import { FULL_STRAIGHT } from "@/utils/constants";
 
 /**
  * Checks if the dice values contain a full straight.
